@@ -5,7 +5,8 @@ import hashlib
 target_address = "1FjMR9gvnmZ3JYMxBbyc3aZK717b5txJoC"
 
 # Starting 256-bit value (must be within the Bitcoin private key range)
-initial_value = int('fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364140', 16)
+initial_value = int('0000000000000000000000000000000000000000000000000000000000000007', 16)
+print(initial_value)
 private_key_int = initial_value
 
 # Function to convert integer to WIF (compressed and uncompressed) and derive the Bitcoin address
@@ -35,6 +36,8 @@ def get_wif_and_address(private_key_int):
 print(type(initial_value))
 print("-1->>", private_key_wif_u)
 print("-2->>", private_key_wif_c)
+print("address_uncompressed", address_uncompressed)
+print("address_compressed", address_compressed)
 
 # while True:
 #     private_key_wif_u, private_key_wif_c, address_uncompressed, address_compressed = get_wif_and_address(private_key_int)
